@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package pokemon;
+
+service PokemonService {
+    rpc Get (GetPokemonRequest) returns (GetPokemonResponse);
+}
+
+message GetPokemonRequest {
+    int32 id = 1;
+    string name = 2;
+}
+
+message GetPokemonResponse {
+    int32 id = 1;
+    string name = 2;
+    int32 base_experience = 3;
+    bool is_default = 4;
+    repeated Move moves = 5;
+}
+
+message Move {
+    int32 id = 1;
+    string name = 2;
+    int32 accuracy = 3;
+    int32 effect_change = 4;
+    int32 pp = 5;
+}
