@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package pokemon;
+package pokeapi;
 
 service PokemonService {
-    rpc Get (GetPokemonRequest) returns (GetPokemonResponse);
+    rpc GetPokemon (GetPokemonRequest) returns (GetPokemonResponse);
 }
 
 message GetPokemonRequest {
@@ -12,6 +12,10 @@ message GetPokemonRequest {
 }
 
 message GetPokemonResponse {
+    Pokemon pokemon = 1;
+}
+
+message Pokemon {
     int32 id = 1;
     string name = 2;
     int32 base_experience = 3;
