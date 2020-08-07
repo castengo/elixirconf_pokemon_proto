@@ -27,6 +27,6 @@ message Move {
     int32 id = 1;
     string name = 2;
     int32 accuracy = 3;
-    int32 effect_change = 4;
+    int32 effect_chance = 4;
     int32 pp = 5;
 }

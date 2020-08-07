@@ -52,15 +52,15 @@ defmodule Pokeapi.Move do
           id: integer,
           name: String.t(),
           accuracy: integer,
-          effect_change: integer,
+          effect_chance: integer,
           pp: integer
         }
-  defstruct [:id, :name, :accuracy, :effect_change, :pp]
+  defstruct [:id, :name, :accuracy, :effect_chance, :pp]
 
   field :id, 1, type: :int32
   field :name, 2, type: :string
   field :accuracy, 3, type: :int32
-  field :effect_change, 4, type: :int32
+  field :effect_chance, 4, type: :int32
   field :pp, 5, type: :int32
 end
 
