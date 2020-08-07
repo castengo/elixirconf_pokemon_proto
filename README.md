@@ -14,12 +14,12 @@ $ protoc --elixir_out=plugins=grpc:./lib proto/*
 
 ## Installation
 
-Add `elixirconf_pokemon_proto` to your list of dependencies in `mix.exs`:
+Add `pokemon_proto` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:elixirconf_pokemon_proto, github: "castengo/elixirconf-pokemon-proto"}
+    {:pokemon_proto, github: "castengo/elixirconf-pokemon-proto"}
   ]
 end
 ```

@@ -1,9 +1,9 @@
-defmodule ElixirconfPokemonProto.MixProject do
+defmodule PokemonProto.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :elixirconf_pokemon_proto,
+      app: :pokemon_proto,
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
@@ -12,12 +12,7 @@ defmodule ElixirconfPokemonProto.MixProject do
   end
 
   # Run "mix help compile.app" to learn about applications.
-  def application do
-    [
-      extra_applications: [:logger],
-      mod: {ElixirconfPokemonProto.Application, []}
-    ]
-  end
+  def application, do: [applications: [:grpc]]
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
