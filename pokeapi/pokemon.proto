@@ -21,6 +21,8 @@ message Pokemon {
     int32 base_experience = 3;
     bool is_default = 4;
     repeated Move moves = 5;
+    int32 height = 6;
+    int32 weight = 7;
 }
 
 message Move {
