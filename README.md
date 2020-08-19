@@ -9,7 +9,7 @@ Houses proto definitions for pokemon.
 After changing `.proto` files, regenerate elixir files by running:
 
 ```bash
-$ protoc --elixir_out=plugins=grpc:./lib proto/* 
+$ protoc --elixir_out=plugins=grpc:./lib pokeapi/* 
 ```
 
 ## Installation
@@ -19,7 +19,7 @@ Add `pokemon_proto` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:pokemon_proto, github: "castengo/elixirconf-pokemon-proto"}
+    {:pokemon_proto, github: "castengo/elixirconf_pokemon_proto"}
   ]
 end
 ```
