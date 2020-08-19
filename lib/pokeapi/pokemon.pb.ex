@@ -33,15 +33,19 @@ defmodule Pokeapi.Pokemon do
           name: String.t(),
           base_experience: integer,
           is_default: boolean,
-          moves: [Pokeapi.Move.t()]
+          moves: [Pokeapi.Move.t()],
+          height: integer,
+          weight: integer
         }
-  defstruct [:id, :name, :base_experience, :is_default, :moves]
+  defstruct [:id, :name, :base_experience, :is_default, :moves, :height, :weight]
 
   field :id, 1, type: :int32
   field :name, 2, type: :string
   field :base_experience, 3, type: :int32
   field :is_default, 4, type: :bool
   field :moves, 5, repeated: true, type: Pokeapi.Move
+  field :height, 7, type: :int32
+  field :weight, 6, type: :int32
 end
 
 defmodule Pokeapi.Move do
